@@ -6,7 +6,7 @@
 			<div class="date">
 				发布日期：{{ post.published_date|date:'Y-m-d' }}
 			</div>
-			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+			<a href="{% url 'post_detail' pk=post.pk %}"><h1>{{ post.title }}</h1></a>
 			<p>{{ post.text|linebreaksbr }}</p>
 			<a href="{% url 'post_detail' pk=post.pk %}">评论： {{ post.approved_comments.count }}</a>
 		</div>
